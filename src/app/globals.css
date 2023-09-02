@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body.modal-open {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.modal {
+  background-color: rgba(110, 110, 110, 0.4);
+}
+
+@layer components {
+  .button {
+    @apply rounded px-3 py-1 font-semibold text-white transition-colors duration-300 ease-out;
+  }
+}

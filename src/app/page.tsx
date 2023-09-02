@@ -1,5 +1,9 @@
-export default function Home() {
+import { AddTodo } from '@/components/addTodo';
+
+export default function HomePage() {
   return (
-    <h1 className="text-3xl font-semibold text-center mt-20">Next-PlayGround</h1>
+    <>
+      <AddTodo />
+    </>
   );
 }

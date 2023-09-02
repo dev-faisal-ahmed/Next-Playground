@@ -2,7 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 
-const poppins = Poppins({subsets:['latin'], weight:["400", "600"]})
+const poppins = Poppins({ subsets: ['latin'], weight: ['400', '600'] });
 
 export const metadata: Metadata = {
   title: 'Next-Playground',
@@ -16,7 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={poppins.className}>{children}</body>
+      <body className={`${poppins.className} bg-slate-200`}>
+        <section className='relative' id='modal-root'></section>
+        <section>{children}</section>
+      </body>
     </html>
   );
 }
